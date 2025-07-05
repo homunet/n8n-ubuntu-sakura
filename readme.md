@@ -152,7 +152,7 @@ CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS     
 ```
 http://xxx.xxx.xxx:5678
 ```
-![n8nエラー画像](images/Screenshot 2025-07-05 at 11.42.46.png)
+![n8nエラー画像](/images/Screenshot 2025-07-05 at 11.42.46.png)
 
 n8nではhttpでのアクセスが非推奨なのでエラーが表示される。ここで設定を変更して強制的にhttpでもアクセスできるように変更できるけれども、今回はちゃんとSSLで通信できるようになるまで設定する。
 
