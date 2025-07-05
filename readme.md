@@ -376,6 +376,10 @@ locationのhttp://localhost:5678が入っている方を以下の内容に書き
 この変更を行った時点で再起動無しで先程のエラーが消える。
 ![](images/n8n_after_connection_recovered.png)
 
-## コンテナ起動不良
+これでセットアップは完了です。お疲れ様でした。
+
+
+##　エラー対策
+### コンテナ起動不良
 この画像が表示された場合には、コンテナが起動していない
 ![](images/nginx_bad_gateway.png)
