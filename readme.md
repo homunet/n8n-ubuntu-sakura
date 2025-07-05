@@ -196,7 +196,7 @@ sudo systemctl start nginx
 ```
 http://xxx.xxx.xxx
 ```
-（画像を表示）
+![](images/n8n_welcome.png)
 
 ## NGINXにリバースプロキシを設定
 n8n公開用の設定ファイルを作成
