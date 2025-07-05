@@ -152,7 +152,7 @@ CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS     
 ```
 http://xxx.xxx.xxx:5678
 ```
-![n8nエラー画像](images/n8n_error.png)
+![](images/n8n_error.png)
 
 n8nではhttpでのアクセスが非推奨なのでエラーが表示される。ここで設定を変更して強制的にhttpでもアクセスできるように変更できるけれども、今回はちゃんとSSLで通信できるようになるまで設定する。
 
@@ -328,7 +328,7 @@ sudo systemctl restart nginx
 ```
 https://xxx.xxx.xxx
 ```
-(画像)
+![](images/n8n_setup_account)
 最初からhttpsでアクセスしても同じ結果が得られる。
 ```
 https://xxx.xxx.xxx
@@ -336,7 +336,7 @@ https://xxx.xxx.xxx
 
 ## n8nのエラーを確認
 この時点で既にn8nが正常稼働しているように見えるものの、ワークフローの作成画面に行くと、以下のエラーが表示される。外部との通信が発生するパーツが使用できない状態。調査したところ、n8nが外部との通信にwebsocketを使っていて、NGINXが通信を通していないために発生する模様（断定できる状態には至らず）。
-（画像）
+![](images/n8n_connection_lost.png)
 対策のため設定を追加する
 ```
 sudo vi /etc/nginx/nginx.conf
@@ -374,4 +374,8 @@ locationのhttp://localhost:5678が入っている方を以下の内容に書き
     }
 ```
 この変更を行った時点で再起動無しで先程のエラーが消える。
+![](images/n8n_after_connection_recovered.png)
 
+## コンテナ起動不良
+この画像が表示された場合には、コンテナが起動していない
+![](images/nginx_bad_gateway.png)
